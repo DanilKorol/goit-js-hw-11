@@ -17,7 +17,6 @@ let lightbox = new SimpleLightbox('.gallery a', {
   captionPosition: 'bottom',
   captionDelay: '250',
   captionType: 'alt',
-  overlay: false,
 });
 
 refs.form.addEventListener('submit', onFormSubmit);
@@ -36,7 +35,6 @@ async function onFormSubmit(evt) {
     return;
   }
   const data = await fetchPixImage(userSearch, page);
-  console.log(data);
 
   try {
     searchRequest(data);
