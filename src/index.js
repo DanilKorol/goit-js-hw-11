@@ -29,6 +29,7 @@ async function onFormSubmit(evt) {
   page = 1;
 
   const userSearch = evt.target.searchQuery.value.trim();
+  localStorage.setItem('input', userSearch);
 
   if (!userSearch) {
     Notify.info("Search line can't be empty, try again");
